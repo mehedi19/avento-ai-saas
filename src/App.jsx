@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import FeatureGrid from './components/FeatureGrid';
@@ -68,6 +69,9 @@ export default function App() {
         mode={authModal.mode} 
         onClose={handleCloseAuthModal} 
       />
+
+      {/* Vercel Web Analytics */}
+      <Analytics />
     </div>
   );
 }
